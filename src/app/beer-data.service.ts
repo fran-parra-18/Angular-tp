@@ -10,11 +10,11 @@ const URL ="https://65ac6284adbd5aa31bdf3714.mockapi.io/api/stockproducts"
 })
 export class BeerDataService {
 
-  constructor(private https: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   public getAll(): Observable<Beer[]>{
 
-    return this.https.get<Beer[]>(URL)
+    return this.http.get<Beer[]>(URL)
           .pipe(
             tap((beers:Beer[])=>beers.forEach(beer=>beer.quantity=0))
           );
