@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Food } from './food';
-
-import { BeerCartService } from '../beer-cart.service';
+import { CartService } from '../cart.service';
 import { BeerDataService } from '../beer-data.service';
 
 
@@ -16,7 +14,7 @@ export class FoodListComponent implements OnInit {
   foods:Food[]=[];  
   
   constructor(
-    private cart: BeerCartService,
+    private cart: CartService,
     private beersDataService: BeerDataService){
   }
   

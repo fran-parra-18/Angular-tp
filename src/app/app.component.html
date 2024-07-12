@@ -5,9 +5,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" [routerLink]="['/home']">Home</a>
-      <a class="nav-item nav-link" [routerLink]="['/beers']">Cervezas</a>
-      <a class="nav-item nav-link" [routerLink]="['/about']">About</a>      
+      <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="active">Home</a>
+      <a class="nav-item nav-link" [routerLink]="['/menu']" routerLinkActive="active">Menu</a>
+      <a class="nav-item nav-link" [routerLink]="['/about']" routerLinkActive="active">About</a>
     </div>
   </div>
 </nav>
@@ -16,6 +16,8 @@
   <router-outlet></router-outlet>
 </div>
 
-<footer class="bg-light py-5">
-  <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
+<footer class="bg-light py-2">
+  <div class="container px-4 px-lg-5">
+    <div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div>
+  </div>
 </footer>

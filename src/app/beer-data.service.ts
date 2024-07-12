@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { Beer } from './beer-list/beer';
+import { Food } from './food-list/food';
 
 const URL ="https://65ac6284adbd5aa31bdf3714.mockapi.io/api/stockproducts"
 
@@ -12,11 +12,11 @@ export class BeerDataService {
 
   constructor(private http: HttpClient) { }
 
-  public getAll(): Observable<Beer[]>{
+  public getAll(): Observable<Food[]>{
 
-    return this.http.get<Beer[]>(URL)
+    return this.http.get<Food[]>(URL)
           .pipe(
-            tap((beers:Beer[])=>beers.forEach(beer=>beer.quantity=0))
+            tap((foods:Food[])=>foods.forEach(food=>food.quantity=0))
           );
   }
 }

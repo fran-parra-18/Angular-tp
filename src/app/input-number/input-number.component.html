@@ -1,6 +1,6 @@
 <div class="d-flex align-items-center">
-    <button type="button" class="btn btn-outline-primary btn-sm" (click)="downQuantity()" [disabled]="quantity <= 0"> - </button>
+    <button type="button" class="btn btn-primary btn-sm" (click)="downQuantity()" [disabled]="quantity <= 0"> - </button>
     <input type="text" class="form-control mx-2"[(ngModel)]="quantity"
     (keyup)="onChangeQuantity($event)">    
-    <button type="button" class="btn btn-outline-primary btn-sm" (click)="upQuantity()" [disabled]="quantity >= max"> + </button>
+    <button type="button" class="btn btn-primary btn-sm" (click)="upQuantity()" [disabled]="quantity >= max"> + </button>
 </div>

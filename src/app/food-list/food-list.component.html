@@ -1,1 +1,37 @@
-<p>food-list works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th></th>       
+            <th></th>                
+        </tr>
+    </thead>
+    <tbody>        
+        @for (food of foods; track food.name) {
+            <tr [ngClass]="{'table-warning': food.clearance}" >
+                <td><img [src]="food.image" width="300px" class="img-thumbnail" [alt]="food.name" ></td>
+                <td>{{ food.name }}</td>
+                <td>{{ food.price | currency }}</td>                
+                @if (food.stock ==0) {
+                    <td><span class="badge text-bg-danger">SIN STOCK</span></td>                
+                }                
+                @if(food.stock>0){
+                    <td>
+                        <app-input-number [(quantity)]="food.quantity" [max]="food.stock"></app-input-number>
+                    </td>
+                    <td>                    
+                        <button class="btn btn-primary" (click)="addToCart(food)">Comprar</button>
+                    </td>
+                }@else{
+                    <td></td>                    
+                }
+            </tr>
+            } @empty {
+            <tr>
+                <td colspan="6">No hay cervezas para mostrar.</td>
+            </tr>            
+            }
+    </tbody>
+</table>

@@ -1,7 +1,6 @@
 button {
     width: 30px;
-    height: 30px;
-    background-color: #007bff;
+    height: 30px;    
     color: white;
     border: none;
     font-size: 20px;
@@ -10,7 +9,7 @@ button {
     justify-content: center;    
 }
 button:disabled {
-    background-color: #7db9fa;
+    background-color: #ff994f;
     color: white;    
     cursor: not-allowed;   
     opacity: 0.6;          

@@ -1,6 +1,10 @@
-<h3>Carrito</h3>
-<ul>
-    @for(beer of cartList$ | async ; track beer.name){
-        <li>{{beer.name}}:{{beer.quantity}}</li>
-    }
-</ul>
+<div class="container">
+    <div id="cart">
+        <h3>Carrito</h3>
+        <ul>
+            @for(food of cartList$ | async ; track food.name){
+                <li>{{food.name}}:{{food.quantity}}</li>
+            }
+        </ul>
+    </div>
+</div>

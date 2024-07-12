@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output,EventEmitter} from '@angular/core';
-import { Beer } from '../beer-list/beer';
+import { Food } from '../food-list/food';
 
 
 @Component({
@@ -16,7 +16,6 @@ export class InputNumberComponent implements OnInit {
   
   @Output()
   quantityChange: EventEmitter<number> = new EventEmitter<number>();
-
   constructor(){}
 
   ngOnInit(): void {
