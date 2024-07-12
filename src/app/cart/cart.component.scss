@@ -1,25 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #d2a679; /* Color de fondo general */
-    margin: 0;
-    padding: 0;
-}
 .container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
 }
 #cart {
     background-color: #f5f5f5;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 80%;
-    margin: 20px auto;    
+    margin: 20px auto; 
 }
-
-ul {
-    list-style-type: none;
+.cart-item {
+    display: flex;
+    justify-content: space-between; 
+    margin: 0; 
 }
-
+.food-quantity {
+    white-space: nowrap;
+}

@@ -1,4 +1,4 @@
-.home{
+.menu{
     height: 100%;
     background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%),url("../../assets/img/fondo.jpg");    
     background-position: center;
@@ -6,4 +6,13 @@
     background-attachment: scroll;
     background-size: cover;    
     text-align: center;
+}
+@media (max-width: 992px) {
+    .menu .container {
+        flex-direction: column;
+    }
+
+    .menu .food-list, .menu .cart {
+        flex: 0 0 100%;
+    }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Food } from './food';
 import { CartService } from '../cart.service';
-import { BeerDataService } from '../beer-data.service';
+import { FoodDataService } from '../food-data.service';
 
 
 @Component({
@@ -15,11 +15,11 @@ export class FoodListComponent implements OnInit {
   
   constructor(
     private cart: CartService,
-    private beersDataService: BeerDataService){
+    private foodDataService: FoodDataService){
   }
   
   ngOnInit(): void {
-    this.beersDataService.getAll()
+    this.foodDataService.getAll()
     .subscribe(foods => this.foods=foods);
   }
 

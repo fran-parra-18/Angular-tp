@@ -13,7 +13,14 @@
             <tr [ngClass]="{'table-warning': food.clearance}" >
                 <td><img [src]="food.image" width="300px" class="img-thumbnail" [alt]="food.name" ></td>
                 <td>{{ food.name }}</td>
-                <td>{{ food.price | currency }}</td>                
+                @if(food.clearance){
+                    <td>
+                        <p class="clearance">{{ food.price | currency }}</p>
+                        <p>{{ (food.price * 0.9) | currency }}</p>
+                    </td>
+                }@else {
+                    <td><p>{{ food.price | currency }}</p></td> 
+                }                               
                 @if (food.stock ==0) {
                     <td><span class="badge text-bg-danger">SIN STOCK</span></td>                
                 }                

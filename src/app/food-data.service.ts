@@ -8,7 +8,7 @@ const URL ="https://65ac6284adbd5aa31bdf3714.mockapi.io/api/stockproducts"
 @Injectable({
   providedIn: 'root'
 })
-export class BeerDataService {
+export class FoodDataService {
 
   constructor(private http: HttpClient) { }
 
